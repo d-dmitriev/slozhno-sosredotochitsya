@@ -257,6 +257,14 @@
     grid-column-end: span 2;
   }
 
+  .main__content.two-columns {
+    margin-left: 6px;
+  }
+
+  .main__subcontent.two-columns {
+    margin-left: 6px;
+  }
+
   .three-columns {
     grid-column-end: span 3;
   }
@@ -274,6 +282,14 @@
 @media(width >= 1024px) {
   .one-column {
     grid-column-end: span 1;
+  }
+  
+  .main__content.two-columns {
+    margin-left: 0;
+  }
+
+  .main__subcontent.two-columns {
+    margin-left: 0;
   }
 }
 .main__subheader {
