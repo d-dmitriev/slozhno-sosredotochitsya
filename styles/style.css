@@ -52,7 +52,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--main-font);
   font-size: 18px;
-  line-height: 23.4px; /* 130% */;
+  line-height: 23.4px; /* 130% */
   display: grid;
   gap: 40px;
   background-color: var(--bg-color);
@@ -278,10 +278,6 @@
   gap: 10px;
 }
 
-.divider {
-  height: 10px;
-}
-
 @media (width >= 768px) {
   .first-column {
     grid-column-start: 1;
@@ -301,11 +297,6 @@
 
   .three-columns {
     grid-column-end: span 3;
-  }
-
-  .divider {
-    grid-column: 1 / 4;
-    height: 40px;
   }
 
   .two-rows {
