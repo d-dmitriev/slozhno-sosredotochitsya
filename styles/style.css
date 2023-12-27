@@ -195,6 +195,12 @@
   }
 }
 
+@media (width >= 1024px) {
+  .header__title {
+    text-shadow: 4px 4px 0px #FF0070;
+  }
+}
+
 .header_subtitle {
   grid-column: 1 / 4;
   justify-self: end;
@@ -370,6 +376,13 @@
   color: var(--header-text-color);
   text-shadow: 2px 2px 0px var(--accent-color);
 }
+
+@media (width >= 1024px) {
+  .footer__text {
+    text-shadow: 2px 2px 0px #FF0070;
+  }
+}
+
 
 @media (width >= 768px) {
   .footer__text {
