@@ -368,7 +368,7 @@
   font-weight: 700;
   line-height: 82.5%; /* 99px */
   color: var(--header-text-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (width >= 768px) {
