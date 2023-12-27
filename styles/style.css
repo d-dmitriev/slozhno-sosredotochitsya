@@ -51,6 +51,8 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px; /* 130% */;
   display: grid;
   gap: 40px;
   background-color: var(--bg-color);
@@ -71,7 +73,7 @@
   height: 100vh;
   /* border: 3px solid red; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
 }
@@ -88,7 +90,6 @@
   right: 38px;
   content: "REC";
   color: var(--decor-color);
-  font-size: 18px;
   line-height: 25px; /* 138.889% */
 }
 
@@ -149,21 +150,31 @@
   border: none;
   font-family: inherit;
   cursor: pointer;
-  padding: 0 13px;
+  padding: 4px 13px;
   text-transform: lowercase;
-  font-size: 18px;
   font-weight: 400;
   line-height: 18px; /* 100% */
-  height: 26px;
   color: var(--link-color);
 }
 
-.header__theme-menu-button_active {
-  border: 1px solid currentColor;
+.header__theme-menu-button:hover {
+  outline: 1px solid;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid;
 }
 
 .header__theme-menu-button:disabled {
   pointer-events: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid;
 }
 
 .header__title {
@@ -198,21 +209,34 @@
 
 .main {
   display: grid;
-  gap: 20px;
+  gap: 50px;
   margin: 0 10px;
 }
 
 @media (width >= 768px) {
   .main {
+    gap: 80px;
     margin: 0 20px;
-    grid-template-columns: repeat(auto-fit, minmax(229px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
   }
 }
 
-@media (width >= 1024px) {
-  .main {
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-  }
+.main__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.main__link:hover {
+  border-bottom: 1px solid;
+}
+
+.main__link:focus {
+  outline: none;
+}
+
+.main__link:focus-visible {
+  outline: 1px solid;
+  outline-offset: -1px;
 }
 
 .main__header {
@@ -224,14 +248,28 @@
 
 .main__content {
   display: grid;
-  grid-template-rows: min-content 1fr;
+  /* grid-template-rows: min-content 1fr; */
+  gap: 20px;
+}
+
+@media (width >= 768px) { /*1024*/
+  .main__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__content-article.gap20 {
+  gap: 20px;
+}
+
+.gap1020 {
   gap: 10px;
 }
 
-.main__subcontent {
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  gap: 20px;
+@media (width >= 768px) {
+  .gap1020 {
+    gap: 20px;
+  }
 }
 
 .main__content-article {
@@ -257,11 +295,7 @@
     grid-column-end: span 2;
   }
 
-  .main__content.two-columns {
-    margin-left: 6px;
-  }
-
-  .main__subcontent.two-columns {
+  .main__content-article.two-columns {
     margin-left: 6px;
   }
 
@@ -283,12 +317,8 @@
   .one-column {
     grid-column-end: span 1;
   }
-  
-  .main__content.two-columns {
-    margin-left: 0;
-  }
 
-  .main__subcontent.two-columns {
+  .main__content-article.two-columns {
     margin-left: 0;
   }
 }
@@ -297,27 +327,33 @@
 }
 
 .main__paragraph {
-  font-size: 18px;
-  line-height: 23.4px; /* 130% */
   color: var(--text-color);
 }
 
 .main__list {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 @media (width >= 768px) {
   .main__list {
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(229px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (width >= 1024px) {
-  .main__list {
-    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
-  }
+.main__list-item {
+  display: inline-flex;
+}
+
+.main__adviсe-list {
+  display: grid;
+  gap: 20px;
+}
+
+.main__adviсe-list-item {
+  display: grid;
+  gap: 10px;
 }
 
 .main__image {
