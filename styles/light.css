@@ -19,8 +19,8 @@
   --header-color: var(--text-color);
   --bg-image: url(../images/cover-image-light.png);
   --bg-image-alt: image-set(
-    url(../images/cover-image-light.avif) type("image/avif"),
-    url(../images/cover-image-light.webp) type("image/webp")
+    url(../images/cover-image-light.avif) type('image/avif'),
+    url(../images/cover-image-light.webp) type('image/webp')
   );
 }
 
@@ -36,8 +36,8 @@
     --header-color: var(--text-color);
     --bg-image: url(../images/cover-image-light.png);
     --bg-image-alt: image-set(
-      url(../images/cover-image-light.avif) type("image/avif"),
-      url(../images/cover-image-light.webp) type("image/webp")
+      url(../images/cover-image-light.avif) type('image/avif'),
+      url(../images/cover-image-light.webp) type('image/webp')
     );
   }
 }

@@ -9,7 +9,7 @@
 }
 
 .corner-decoration::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 10px;
   right: 10px;
@@ -29,7 +29,7 @@
 }
 
 .corner-decoration::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -56,7 +56,7 @@
   display: grid;
   gap: 40px;
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
+  /* background-image: var(--bg-image); */
   background-image: var(--bg-image-alt, var(--bg-image));
   background-position: top center;
   background-size: cover;
@@ -89,7 +89,7 @@
   position: absolute;
   top: 10px;
   right: 38px;
-  content: "REC";
+  content: 'REC';
   color: var(--decor-color);
   line-height: 25px; /* 138.889% */
 }
@@ -105,7 +105,7 @@
   position: absolute;
   top: 18px;
   right: 19px;
-  content: "";
+  content: '';
   background-color: var(--decor-color);
   border-radius: 50%;
   width: 9px;
