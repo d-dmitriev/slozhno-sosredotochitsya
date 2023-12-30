@@ -11,25 +11,33 @@
   */
   --text-color: #353430;
   --decor-text-color: #353430;
-  --accent-color: #FF8DCB;
-  --header-text-color: #FFC2E6;
-  --bg-color: #FFF1F7;
+  --accent-color: #ff8dcb;
+  --header-text-color: #ffc2e6;
+  --bg-color: #fff1f7;
   --link-color: #353430;
   --decor-color: transparent;
   --header-color: var(--text-color);
   --bg-image: url(../images/cover-image-light.png);
+  --bg-image-alt: image-set(
+    url(../images/cover-image-light.avif) type("image/avif"),
+    url(../images/cover-image-light.webp) type("image/webp")
+  );
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --text-color: #353430;
     --decor-text-color: #353430;
-    --accent-color: #FF8DCB;
-    --header-text-color: #FFC2E6;
-    --bg-color: #FFF1F7;
+    --accent-color: #ff8dcb;
+    --header-text-color: #ffc2e6;
+    --bg-color: #fff1f7;
     --link-color: #353430;
     --decor-color: transparent;
     --header-color: var(--text-color);
     --bg-image: url(../images/cover-image-light.png);
+    --bg-image-alt: image-set(
+      url(../images/cover-image-light.avif) type("image/avif"),
+      url(../images/cover-image-light.webp) type("image/webp")
+    );
   }
 }

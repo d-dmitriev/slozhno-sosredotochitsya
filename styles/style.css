@@ -57,6 +57,7 @@
   gap: 40px;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
+  background-image: var(--bg-image-alt, var(--bg-image));
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
@@ -197,7 +198,7 @@
 
 @media (width >= 1024px) {
   .header__title {
-    text-shadow: 4px 4px 0px #FF0070;
+    text-shadow: 4px 4px 0px #ff0070;
   }
 }
 
@@ -354,6 +355,11 @@
   gap: 10px;
 }
 
+.main__picture {
+  flex: 1;
+  display: inline-flex;
+}
+
 .main__image {
   width: 100%;
   height: 100%;
@@ -379,10 +385,9 @@
 
 @media (width >= 1024px) {
   .footer__text {
-    text-shadow: 2px 2px 0px #FF0070;
+    text-shadow: 2px 2px 0px #ff0070;
   }
 }
-
 
 @media (width >= 768px) {
   .footer__text {
